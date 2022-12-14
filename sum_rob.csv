@@ -1,0 +1,69 @@
+name,parent,value
+Origin,,
+Mesa,Origin,14501
+Virginia Beach,Origin,15490
+Fairfax,Origin,17034
+Aurora,Origin,19093
+Salt Lake City,Origin,19738
+Arlington,Origin,20435
+Raleigh,Origin,22446
+Wichita,Origin,28498
+Omaha,Origin,31573
+Montgomery,Origin,32688
+El Paso,Origin,34074
+Nassau,Origin,35070
+Orlando,Origin,36715
+Tulsa,Origin,38693
+Suffolk,Origin,40718
+Honolulu,Origin,43096
+Tucson,Origin,43433
+Austin,Origin,43710
+San Jose,Origin,43898
+Albuquerque,Origin,50085
+Oklahoma City,Origin,53418
+Fresno,Origin,55858
+Denver,Origin,62621
+Cincinnati,Origin,67274
+Sacramento,Origin,68116
+Tampa,Origin,74684
+Buffalo,Origin,74807
+Fort Worth,Origin,76925
+Portland,Origin,79667
+Seattle,Origin,81833
+Charlotte,Origin,84853
+Nashville,Origin,85261
+Pittsburgh,Origin,89068
+Long Beach,Origin,89198
+San Antonio,Origin,91720
+Minneapolis,Origin,94426
+Jacksonville,Origin,94632
+San Diego,Origin,106365
+Indianapolis,Origin,106835
+Kansas City,Origin,109738
+Prince George's County,Origin,109871
+Milwaukee,Origin,116542
+Columbus,Origin,119480
+Phoenix,Origin,128296
+Las Vegas,Origin,130103
+Oakland,Origin,131467
+New Orleans,Origin,135695
+Newark,Origin,147736
+St. Louis,Origin,151553
+Cleveland,Origin,167370
+Miami,Origin,168544
+Boston,Origin,170604
+Atlanta,Origin,170759
+Miami-Dade,Origin,171070
+Memphis,Origin,172534
+San Francisco,Origin,202335
+"Washington, D.C.",Origin,220692
+Dallas,Origin,251894
+Baltimore,Origin,359125
+Baltimore,Origin,359125
+Houston,Origin,396877
+Philadelphia,Origin,402202
+Detroit,Origin,436709
+Chicago,Origin,891145
+Los Angeles,Origin,973648
+Los Angeles,Origin,973648
+New York,Origin,2309302
