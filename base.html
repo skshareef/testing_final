@@ -5,10 +5,8 @@
 
 	<script src="https://d3js.org/d3.v7.min.js"></script>
 	<script src="https://d3js.org/d3.v6.js"></script>
-
-
-
-
+    <!-- CSS only -->
+ 
 </head>
 <body>
 
@@ -17,7 +15,13 @@
 main{
 	float: left;
 }
-
+body {
+		background-color: #935d8c;
+		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+		background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+	}
 div {
 float: justify;
 
@@ -27,17 +31,120 @@ float: justify;
 body {
   zoom: 90%;
 }
+.pushable {
+    background: hsl(340deg 100% 32%);
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+  }
+  .front {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: hsl(345deg 100% 47%);
+    color: white;
+    transform: translateY(-6px);
+  }
+
+  .pushable:active .front {
+    transform: translateY(-2px);
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+
+  .btn{
+
+font-family: Roboto, sans-serif;
+font-weight: 0;
+font-size: 14px;
+color: #fff;
+background-color: #0066CC;
+padding: 10px 29px;
+border: 2px solid #0066cc;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border-radius: 50px;
+transition : 1000ms;
+cursor: pointer;
+}
+
+.btn:hover{
+
+transition : 1000ms;
+padding: 10px 50px;
+transform : translateY(-0px);
+background-color: #fff;
+color: #0066cc;
+border: solid 2px #0066cc;
+}
+
+.btn-1{
+
+font-family: Roboto, sans-serif;
+font-weight: 0;
+font-size: 14px;
+color: #fff;
+background-color: #5dbea3;
+padding: 10px 29px;
+border: 2px solid #5dbea3;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border-radius: 50px;
+transition : 1000ms;
+cursor: pointer;
+}
+
+.btn-1:hover{
+
+transition : 1000ms;
+padding: 10px 50px;
+transform : translateY(-0px);
+background-color: #fff;
+color: #5dbea3;
+border: solid 2px #5dbea3;
+}
+
+.graph{
+
+  color: white;
+  text-align: left;
+  letter-spacing:2px;
+  line-height:30px;
+  text-shadow:3px 1px blue;
+  word-spacing:3px;
+  font-family: Arial;
+  font-size: 24px;
+}
 </style>
-
-
+</br>
+    <div style="text-align: center;">
 	<a href="index.html">
-			<button type="button">Home</button></a>
+		<button class="pushable" ><span class="front">Home</span></button></a>
 		</br>
+	</div>
+</br>
+<p class="graph">Graph no. 1 : Which city has the least and highest crimes in every crime category?</p>	
+<div>
+	
+	<button type="button" id="Burgalary_sum1" class="btn" style="margin:5px;">Burgalary</button>
+			<button type="button" id="Rape_sum1"  class="btn" style="margin:5px;">Rape</button>
+				<button type="button" id="Robbery_sum1"  class="btn" style="margin:5px;">Robbery</button>
+				<button type="button" id="Aggressive_sum1"  class="btn" style="margin:5px;">Aggressive</button>
 
-<button type="button" id="Burgalary_sum" style="margin:5px;">Burgalary_sum</button>
-		<button type="button" id="Rape_sum" style="margin:5px;">Rape_sum</button>
-		<button type="button" id="Robbery_sum" style="margin:5px;">Robbery_sum</button>
-		<button type="button" id="Aggressive_sum" style="margin:5px;">Aggressive_sum</button>
+</div>
+</br>
+
+<div>
+<svg id="map" width=1000, height=400 ></svg>
+		<script src="graph2.js"></script>
+</div>
+<br>
+		<p class="graph">Graph no. 2 : What is the trend of different crimes which are occurring every year?</p>
+<button type="button" id="Burgalary_sum"  class="btn"  style="margin:5px;">Burgalary</button>
+		<button type="button" id="Rape_sum" class="btn" style="margin:5px;">Rape</button>
+		<button type="button" id="Robbery_sum" class="btn"  style="margin:5px;">Robbery</button>
+		<button type="button" id="Aggressive_sum" class="btn" style="margin:5px;">Aggressive</button>
+
 
 		<div id="main">
 	<svg id="map1" ></svg>
@@ -45,19 +152,7 @@ body {
 		</div>
 
 
-
-<div>
-	<button type="button" id="Burgalary_sum1" style="margin:5px;">Burgalary_sum</button>
-			<button type="button" id="Rape_sum1" style="margin:5px;">Rape_sum</button>
-				<button type="button" id="Robbery_sum1" style="margin:5px;">Robbery_sum</button>
-				<button type="button" id="Aggressive_sum1" style="margin:5px;">Aggressive_sum</button>
-
-</div>
-
-<div>
-<svg id="map" width=1000, height=400 ></svg>
-		<script src="graph2.js"></script>
-</div>
+		
 
 
 
@@ -65,27 +160,35 @@ body {
 </br>
 
 
+<p class="graph">Graph no. 3 : What are the percentages of individual crimes that occur in each city?</p>
 
-
-<button type="button" id="Burgalary_sum4" style="margin:5px;">Burgalary</button>
-<button type="button" id="Rape_sum4" style="margin:5px;">Rape</button>
-<button type="button" id="Robbery_sum4" style="margin:5px;">Robbery</button>
-<button type="button" id="Violentcrime_sum4" style="margin:5px;">  Violent</button>
+<button type="button" id="Burgalary_sum4"  class="btn" style="margin:5px;">Burgalary</button>
+<button type="button" id="Rape_sum4"  class="btn" style="margin:5px;">Rape</button>
+<button type="button" id="Robbery_sum4"  class="btn" style="margin:5px;">Robbery</button>
+<button type="button" id="Violentcrime_sum4"  class="btn" style="margin:5px;"> Aggressive</button>
 
 
 
 <div id="my_dataviz">
+	
+<p class="graph">(Fun Tip : You can play with the bubbles)</p>
 <script src="demmm.js"></script>
 </div>
-
+</br>
+<p class="graph">Graph no. 4 : Which year has the lowest crimes, and which has the highest for a particular type of crime?</p>
 <div >
-    <button type="button"  class="btn btn-outline-secondary" id="Burgalary_sum2"
-        style="margin:5px;  ">Burgalary_sum</button>
-    <button type="button" class="btn btn-outline-secondary" id="Rape_sum2" style="margin:5px;">Rape_sum</button>
-    <button type="button" class="btn btn-outline-secondary" id="Robbery_sum2" style="margin:5px;">Robbery_sum</button>
-    <button type="button" class="btn btn-outline-secondary" id="Aggressive_sum2" style="margin:5px;">Aggressive_sum</button>
-		<button type="button" class="btn btn-outline-secondary" id="sort" style="margin:5px;">Toggle
-				sort</button>
+	<div>
+    <button type="button" class="btn"   id="Burgalary_sum2"
+        style="margin:5px;  ">Burgalary</button>
+    <button type="button" class="btn"  id="Rape_sum2" style="margin:5px;">Rape</button>
+    <button type="button" class="btn" id="Robbery_sum2" style="margin:5px;">Robbery</button>
+    <button type="button" class="btn" id="Aggressive_sum2" style="margin:5px;">Aggressive</button>
+</div>
+		<button type="button"  class="btn-1" id="sort" style="margin:5px;">Toggle
+				Sort
+				<div class="button__horizontal"></div>
+				<div class="button__vertical"></div>
+			</button>
 </div>
 <div id="map2"  width=1100 , height=400>
 
